@@ -1,0 +1,13 @@
+navigation:
+  home: Home
+  profile: Profile
+  messages: Messages
+  history: History
+  tasks: Tasks
+  communities: Communities
+  settings: Settings
+  support: Support
+  privacy: Privacy
+  language:
+    en: English
+    fr: French
