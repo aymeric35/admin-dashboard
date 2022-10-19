@@ -24,7 +24,7 @@ specifiers:
   pinia: ^2.0.22
   pnpm: ^7.13.2
   postcss: ^8.4.18
-  postcss-nested: ^6.0.0
+  postcss-nesting: ^10.2.0
   shiki: ^0.11.1
   taze: ^0.8.2
   typescript: ^4.8.4
@@ -77,7 +77,7 @@ devDependencies:
   markdown-it-shiki: 0.5.1
   pnpm: 7.13.4
   postcss: 8.4.18
-  postcss-nested: 6.0.0_postcss@8.4.18
+  postcss-nesting: 10.2.0_postcss@8.4.18
   shiki: 0.11.1
   taze: 0.8.2
   typescript: 4.8.4
@@ -1355,6 +1355,17 @@ packages:
     requiresBuild: true
     dev: true
     optional: true
+
+  /@csstools/selector-specificity/2.0.2_dvkg4kkb622mvceygg47xxdz3a:
+    resolution: {integrity: sha512-IkpVW/ehM1hWKln4fCA3NzJU8KwD+kIOvPZA4cqxoJHtE21CCzjyp+Kxbu0i5I4tBNOlXPL9mjwnWlL0VEG4Fg==}
+    engines: {node: ^12 || ^14 || >=16}
+    peerDependencies:
+      postcss: ^8.2
+      postcss-selector-parser: ^6.0.10
+    dependencies:
+      postcss: 8.4.18
+      postcss-selector-parser: 6.0.10
+    dev: true
 
   /@cypress/request/2.88.10:
     resolution: {integrity: sha512-Zp7F+R93N0yZyG34GutyTNr+okam7s/Fzc1+i3kcqOP8vk6OuajuE9qZJ6Rs+10/1JFtXFYMdyarnU1rZuJesg==}
@@ -6650,12 +6661,13 @@ packages:
     hasBin: true
     dev: true
 
-  /postcss-nested/6.0.0_postcss@8.4.18:
-    resolution: {integrity: sha512-0DkamqrPcmkBDsLn+vQDIrtkSbNkv5AD/M322ySo9kqFkCIYklym2xEmWkwo+Y3/qZo34tzEPNUw4y7yMCdv5w==}
-    engines: {node: '>=12.0'}
+  /postcss-nesting/10.2.0_postcss@8.4.18:
+    resolution: {integrity: sha512-EwMkYchxiDiKUhlJGzWsD9b2zvq/r2SSubcRrgP+jujMXFzqvANLt16lJANC+5uZ6hjI7lpRmI6O8JIl+8l1KA==}
+    engines: {node: ^12 || ^14 || >=16}
     peerDependencies:
-      postcss: ^8.2.14
+      postcss: ^8.2
     dependencies:
+      '@csstools/selector-specificity': 2.0.2_dvkg4kkb622mvceygg47xxdz3a
       postcss: 8.4.18
       postcss-selector-parser: 6.0.10
     dev: true
