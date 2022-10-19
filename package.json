@@ -44,6 +44,7 @@
     "markdown-it-shiki": "^0.5.1",
     "pnpm": "^7.13.2",
     "postcss": "^8.4.18",
+    "postcss-mixins": "^9.0.4",
     "postcss-nesting": "^10.2.0",
     "postcss-simple-vars": "^7.0.0",
     "shiki": "^0.11.1",
