@@ -6,6 +6,7 @@ specifiers:
   '@intlify/vite-plugin-vue-i18n': ^6.0.3
   '@types/markdown-it-link-attributes': ^3.0.1
   '@types/nprogress': ^0.2.0
+  '@types/postcss-mixins': ^9.0.0
   '@unocss/reset': ^0.45.28
   '@vitejs/plugin-vue': ^3.1.2
   '@vue/test-utils': ^2.1.0
@@ -26,7 +27,6 @@ specifiers:
   postcss: ^8.4.18
   postcss-mixins: ^9.0.4
   postcss-nesting: ^10.2.0
-  postcss-simple-vars: ^7.0.0
   shiki: ^0.11.1
   taze: ^0.8.2
   typescript: ^4.8.4
@@ -66,6 +66,7 @@ devDependencies:
   '@intlify/vite-plugin-vue-i18n': 6.0.3_vite@3.1.8+vue-i18n@9.2.2
   '@types/markdown-it-link-attributes': 3.0.1
   '@types/nprogress': 0.2.0
+  '@types/postcss-mixins': 9.0.0
   '@vitejs/plugin-vue': 3.1.2_vite@3.1.8+vue@3.2.41
   '@vue/test-utils': 2.1.0_vue@3.2.41
   autoprefixer: 10.4.12_postcss@8.4.18
@@ -81,7 +82,6 @@ devDependencies:
   postcss: 8.4.18
   postcss-mixins: 9.0.4_postcss@8.4.18
   postcss-nesting: 10.2.0_postcss@8.4.18
-  postcss-simple-vars: 7.0.0_postcss@8.4.18
   shiki: 0.11.1
   taze: 0.8.3
   typescript: 4.8.4
@@ -1922,6 +1922,12 @@ packages:
 
   /@types/nprogress/0.2.0:
     resolution: {integrity: sha512-1cYJrqq9GezNFPsWTZpFut/d4CjpZqA0vhqDUPFWYKF1oIyBz5qnoYMzR+0C/T96t3ebLAC1SSnwrVOm5/j74A==}
+    dev: true
+
+  /@types/postcss-mixins/9.0.0:
+    resolution: {integrity: sha512-/JLztESO7+ls2MIFK0243C/iwOI/PtgVOMOyc8gYZSvXXkeT7/b74+zuW78cXQjlaAUAyMF5tE176+K3uYWc/Q==}
+    dependencies:
+      postcss: 8.4.18
     dev: true
 
   /@types/resolve/1.17.1:
