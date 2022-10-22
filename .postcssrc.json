@@ -1,0 +1,8 @@
+{
+    "plugins": {
+        "autoprefixer": {},
+        "postcss-mixins": {},
+        "postcss-nesting": {},
+        "postcss-simple-vars": {}
+    }
+}
