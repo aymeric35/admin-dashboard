@@ -11,11 +11,20 @@ import { VitePWA } from 'vite-plugin-pwa'
 import VueI18n from '@intlify/vite-plugin-vue-i18n'
 import Inspect from 'vite-plugin-inspect'
 import Unocss from 'unocss/vite'
+import autoprefixer from 'autoprefixer'
+import postcssMixins from 'postcss-mixins'
+import postcssNesting from 'postcss-nesting'
 
 export default defineConfig({
   resolve: {
     alias: {
       '~/': `${path.resolve(__dirname, 'src')}/`,
+    },
+  },
+
+  css: {
+    postcss: {
+      plugins: [autoprefixer, postcssMixins, postcssNesting]
     },
   },
 
