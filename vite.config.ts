@@ -11,9 +11,6 @@ import { VitePWA } from 'vite-plugin-pwa'
 import VueI18n from '@intlify/vite-plugin-vue-i18n'
 import Inspect from 'vite-plugin-inspect'
 import Unocss from 'unocss/vite'
-// import autoprefixer from 'autoprefixer'
-// import postcssMixins from 'postcss-mixins'
-// import postcssNesting from 'postcss-nesting'
 
 export default defineConfig({
   resolve: {
@@ -109,16 +106,6 @@ export default defineConfig({
     // Visit http://localhost:3333/__inspect/ to see the inspector
     Inspect(),
   ],
-
-  // css: {
-  //   postcss: {
-  //     plugins: [
-  //       autoprefixer,
-  //       postcssMixins,
-  //       postcssNesting,
-  //     ]
-  //   }
-  // },
 
   // https://github.com/vitest-dev/vitest
   test: {
