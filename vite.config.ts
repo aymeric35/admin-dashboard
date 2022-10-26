@@ -24,7 +24,11 @@ export default defineConfig({
 
   css: {
     postcss: {
-      plugins: [autoprefixer, postcssMixins, postcssNesting]
+      plugins: [
+        autoprefixer,
+        postcssMixins,
+        postcssNesting
+      ]
     },
   },
 
