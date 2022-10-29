@@ -9,5 +9,7 @@ navigation:
   support: Support
   privacy: Privacy
   language:
+    switch: Change language
     en: English
     fr: French
+  
