@@ -37,7 +37,7 @@ const pages = {
     translation: 'navigation.privacy',
   },
 }
-</script> 
+</script>
 
 <template>
   <nav class="menu">
@@ -64,7 +64,7 @@ const pages = {
 
   & .links {
     display: flex;
-    gap: 0.75rem;
+    gap: 1.25rem;
     justify-items: center;
   }
 
