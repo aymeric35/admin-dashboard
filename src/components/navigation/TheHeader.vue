@@ -5,7 +5,8 @@ const closeNavigation = () => isMenuOpen.value = false
 const target = ref(null)
 onClickOutside(target, () => closeNavigation())
 
-const isMobile = () => screen.width <= 760
+const { width } = useWindowSize()
+const isMobile = () => width.value <= 430
 </script>
 
 <template>
