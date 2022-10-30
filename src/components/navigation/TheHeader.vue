@@ -1,25 +1,29 @@
 <script setup lang="ts">
-const isMenuOpen = ref(false);
-const closeNavigation = () => isMenuOpen.value = false;
+const isMenuOpen = ref(false)
+const closeNavigation = () => isMenuOpen.value = false
 
-const target = ref(null);
+const target = ref(null)
 onClickOutside(target, () => closeNavigation())
 
+const isMobile = () => screen.width <= 760
 </script>
 
 <template>
-    <header>
-        <transition name="translate">
-            <TheNavigation v-if="isMenuOpen" @close="closeNavigation" ref="target" />
-        </transition>
-        <section>
-            <div>
-                <button @click="isMenuOpen = !isMenuOpen">
-                    Menu
-                </button>
-            </div>
-        </section>
-    </header>
+  <header>
+    <transition name="translate">
+      <TheNavigation v-if="isMenuOpen" ref="target" @close="closeNavigation" />
+    </transition>
+    <section>
+      <div>
+        <button class="menu i-mdi:menu" @click="isMenuOpen = !isMenuOpen" />
+      </div>
+      <div>
+        <button class="notifications i-mdi:bell-outline" />
+        <button class="account i-mdi:account-circle" />
+      </div>
+    </section>
+    <MobileFixedMenu v-if="isMobile()" />
+  </header>
 </template>
 
 <style lang="scss" scoped>
@@ -31,5 +35,29 @@ onClickOutside(target, () => closeNavigation())
 :deep(.translate-enter-active),
 :deep(.translate-leave-active) {
     transition: translate .3s ease-out;
+}
+
+section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & .menu {
+        width: 5rem;
+        height: 5rem;
+        background-color: $amber-500;
+        translate: -10%;
+    }
+
+    & :last-child {
+        display: flex;
+        gap: 1.5rem;
+    }
+
+    & .notifications,
+    .account {
+        width: 4rem;
+        height: 4rem;
+    }
 }
 </style>
