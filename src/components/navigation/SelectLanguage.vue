@@ -1,31 +1,30 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-
 const open = ref(false)
+const closeModal = () => open.value = false
 
 const { locale } = useI18n()
 const languages = ['en', 'fr']
 const changeLocale = (language: string) => {
-    if (locale.value === language) return
-    locale.value = language
+  if (locale.value === language) return
+  locale.value = language
 }
 </script>
 
 <template>
-    <button @click="open = true">
-        <span i-mdi:translate-variant />
-        {{ $t('navigation.language.switch') }}
-    </button>
-    <transition name="translate">
-        <div v-if="open" class="modal">
-            <span class="close i-mdi:close" @click="open = false" />
-            <div class="container">
-                <button v-for="language in languages" :key="language" @click="changeLocale(language)">
-                    {{ $t(`navigation.language.${language}`) }}
-                </button>
-            </div>
-        </div>
-    </transition>
+  <button @click="open = true">
+    <span i-mdi:translate-variant />
+    {{ $t('navigation.language.switch') }}
+  </button>
+  <transition name="translate">
+    <div v-if="open" class="modal">
+      <span class="close i-mdi:close" @click="open = false" />
+      <div class="container">
+        <button v-for="language in languages" :key="language" @click="[changeLocale(language), closeModal()]">
+          {{ $t(`navigation.language.${language}`) }}
+        </button>
+      </div>
+    </div>
+  </transition>
 </template>
 
 <style lang="scss" scoped>
