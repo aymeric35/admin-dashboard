@@ -8,6 +8,7 @@ export {}
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     MobileFixedMenu: typeof import('./components/navigation/MobileFixedMenu.vue')['default']
+    ProjectCard: typeof import('./components/home/ProjectCard.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     SelectLanguage: typeof import('./components/navigation/SelectLanguage.vue')['default']
