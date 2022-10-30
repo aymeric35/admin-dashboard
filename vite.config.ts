@@ -24,9 +24,9 @@ export default defineConfig({
       scss: {
         additionalData: `
         @import "./src/styles/conf.scss";
-        `
-      }
-    }
+        `,
+      },
+    },
   },
 
   plugins: [
