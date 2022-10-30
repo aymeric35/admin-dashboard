@@ -30,35 +30,39 @@ const isMobile = () => width.value <= 430
 <style lang="scss" scoped>
 :deep(.translate-enter-from),
 :deep(.translate-leave-to) {
-    translate: -100% 0;
+  translate: -100% 0;
 }
 
 :deep(.translate-enter-active),
 :deep(.translate-leave-active) {
-    transition: translate .3s ease-out;
+  transition: translate .3s ease-out;
 }
 
 section {
+  @include shadow(lg);
+  background-color: $neutral-100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 200;
+  position: relative;
+
+  & .menu {
+    width: 5rem;
+    height: 5rem;
+    background-color: $amber-500;
+    translate: -10%;
+  }
+
+  & :last-child {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    gap: 1.5rem;
+  }
 
-    & .menu {
-        width: 5rem;
-        height: 5rem;
-        background-color: $amber-500;
-        translate: -10%;
-    }
-
-    & :last-child {
-        display: flex;
-        gap: 1.5rem;
-    }
-
-    & .notifications,
-    .account {
-        width: 4rem;
-        height: 4rem;
-    }
+  & .notifications,
+  .account {
+    width: 4rem;
+    height: 4rem;
+  }
 }
 </style>
