@@ -7,13 +7,17 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    AnnouncementCard: typeof import('./components/home/AnnouncementCard.vue')['default']
     MobileFixedMenu: typeof import('./components/navigation/MobileFixedMenu.vue')['default']
     ProjectCard: typeof import('./components/home/ProjectCard.vue')['default']
+    ProjectView: typeof import('./components/home/project/ProjectView.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     SelectLanguage: typeof import('./components/navigation/SelectLanguage.vue')['default']
     TheHeader: typeof import('./components/navigation/TheHeader.vue')['default']
     TheMenu: typeof import('./components/navigation/TheMenu.vue')['default']
     TheNavigation: typeof import('./components/navigation/TheNavigation.vue')['default']
+    TheProject: typeof import('./components/home/project/TheProject.vue')['default']
+    TheTrendings: typeof import('./components/home/TheTrendings.vue')['default']
   }
 }
