@@ -47,19 +47,19 @@ section {
   z-index: 200;
   position: relative;
 
-  & .menu {
+  .menu {
     width: 5rem;
     height: 5rem;
     background-color: $amber-500;
     translate: -10%;
   }
 
-  & :last-child {
+  :last-child {
     display: flex;
     gap: 1.5rem;
   }
 
-  & .notifications,
+  .notifications,
   .account {
     width: 4rem;
     height: 4rem;

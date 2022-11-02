@@ -56,19 +56,19 @@ const pages = {
 .menu {
   margin-top: 4rem;
 
-  & ul {
+  ul {
     display: flex;
     flex-direction: column;
     gap: 1.75rem;
   }
 
-  & .links {
+  .links {
     display: flex;
     gap: 1.25rem;
     justify-items: center;
   }
 
-  & li:nth-child(7) {
+  li:nth-child(7) {
     margin-top: 4rem;
   }
 }

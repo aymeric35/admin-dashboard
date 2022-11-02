@@ -23,7 +23,7 @@ const buttons = ['i-mdi:magnify', 'i-mdi:plus-circle', 'i-mdi:upload', 'i-mdi:sh
     border-radius: 1rem;
     z-index: 500;
 
-    & button {
+    button {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -32,15 +32,15 @@ const buttons = ['i-mdi:magnify', 'i-mdi:plus-circle', 'i-mdi:upload', 'i-mdi:sh
         background-color: $neutral-900;
     }
 
-    & button:not(:last-child) {
+    button:not(:last-child) {
         border-right: solid 0.1rem $neutral-800;
     }
 
-    & button:not(:first-child) {
+    button:not(:first-child) {
         border-left: solid 0.1rem $neutral-800;
     }
 
-    & span {
+    span {
         width: 50%;
         height: 50%;
         color: $neutral-100;

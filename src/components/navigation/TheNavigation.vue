@@ -51,7 +51,7 @@
         width: 18%;
     }
 
-    & .close {
+    .close {
         height: 2rem;
         position: absolute;
         right: 0.25rem;
@@ -59,14 +59,14 @@
         width: 2rem;
     }
 
-    & h1 {
+    h1 {
         display: flex;
         gap: 1.25rem;
         justify-items: center;
         font-size: $font-size-lg;
     }
 
-    & :deep(a) {
+    :deep(a) {
         font-size: $font-size-md;
     }
 }
@@ -79,7 +79,7 @@
     height: 100%;
     justify-content: end;
 
-    & :deep(button:not(.modal button)) {
+    :deep(button:not(.modal button)) {
         display: flex;
         gap: 1.25rem;
         justify-items: center;

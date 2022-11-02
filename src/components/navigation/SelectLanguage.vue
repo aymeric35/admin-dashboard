@@ -39,7 +39,7 @@ const changeLocale = (language: string) => {
     height: 100vh;
     z-index: 999;
 
-    & .close {
+    .close {
         height: 4rem;
         position: absolute;
         right: 1vw;
@@ -47,7 +47,7 @@ const changeLocale = (language: string) => {
         width: 4rem;
     }
 
-    & .container {
+    .container {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -56,7 +56,7 @@ const changeLocale = (language: string) => {
         height: 100%;
     }
 
-    & button {
+    button {
         font-size: $font-size-xl;
     }
 }
