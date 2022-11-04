@@ -24,32 +24,8 @@
     overflow-y: auto;
     padding: 2rem 1.5rem;
     position: fixed;
-    width: 70%;
+    width: 32rem;
     z-index: 800;
-
-    @media (min-width: $bigPhone) {
-        width: 40%;
-    }
-
-    @media (min-width: $tablet) {
-        width: 35%;
-    }
-
-    @media (min-width: $bigTablet) {
-        width: 30%;
-    }
-
-    @media (min-width: $bigTablet) {
-        width: 25%;
-    }
-
-    @media (min-width: $smallDesktop) {
-        width: 20%;
-    }
-
-    @media (min-width: $desktop) {
-        width: 18%;
-    }
 
     .close {
         height: 2rem;

@@ -1,6 +1,14 @@
 <script setup lang="ts">
 const isMenuOpen = ref(false)
-const closeNavigation = () => isMenuOpen.value = false
+const closeNavigation = () => {
+  isMenuOpen.value = false
+  document.body.classList.remove('nav-open')
+}
+
+const openMenu = () => {
+  isMenuOpen.value = !isMenuOpen.value
+  document.body.classList.add('nav-open')
+}
 
 const target = ref(null)
 onClickOutside(target, () => closeNavigation())
@@ -16,7 +24,7 @@ const isMobile = () => width.value <= 430
     </transition>
     <section>
       <div>
-        <button class="menu i-mdi:menu" @click="isMenuOpen = !isMenuOpen" />
+        <button class="menu i-mdi:menu" @click="openMenu" />
       </div>
       <div>
         <button class="notifications i-mdi:bell-outline" />

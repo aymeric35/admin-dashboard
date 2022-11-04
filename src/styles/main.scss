@@ -26,8 +26,21 @@ body {
   overflow-y: scroll;
 }
 
+body.nav-open {
+  overflow-x: hidden;
+}
+
+body.nav-open main {
+  padding-left: 32rem;
+}
+
 section {
   padding: 2rem 1.5rem;
+}
+
+main {
+  width: 100%;
+  transition: .3s ease-out;
 }
 
 #nprogress {
