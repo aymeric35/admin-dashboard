@@ -4,7 +4,6 @@ const closeNavigation = () => {
   isMenuOpen.value = false
   document.body.classList.remove('nav-open')
 }
-
 const openMenu = () => {
   isMenuOpen.value = !isMenuOpen.value
   document.body.classList.add('nav-open')
@@ -32,6 +31,7 @@ const isMobile = () => width.value <= 430
       </div>
     </section>
     <MobileFixedMenu v-if="isMobile()" />
+    <div v-if="isMenuOpen" class="overlay" />
   </header>
 </template>
 
@@ -72,5 +72,24 @@ section {
     width: 4rem;
     height: 4rem;
   }
+}
+
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 300;
+}
+
+@media (min-width: $bigPhone) {
+  .overlay {
+    display: none;
+  }
+
 }
 </style>

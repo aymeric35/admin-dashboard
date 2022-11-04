@@ -30,9 +30,12 @@ body.nav-open {
   overflow-x: hidden;
 }
 
-body.nav-open main {
-  padding-left: 32rem;
+@media (min-width: $bigPhone) {
+  body.nav-open main {
+    padding-left: 32rem;
+  }
 }
+
 
 section {
   padding: 2rem 1.5rem;
