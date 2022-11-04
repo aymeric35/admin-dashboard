@@ -7,17 +7,21 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
-    AnnouncementCard: typeof import('./components/home/AnnouncementCard.vue')['default']
+    AnnouncementCard: typeof import('./components/home/announcement/AnnouncementCard.vue')['default']
+    AnnouncementView: typeof import('./components/home/announcement/AnnouncementView.vue')['default']
     MobileFixedMenu: typeof import('./components/navigation/MobileFixedMenu.vue')['default']
     ProjectCard: typeof import('./components/home/ProjectCard.vue')['default']
     ProjectView: typeof import('./components/home/project/ProjectView.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     SelectLanguage: typeof import('./components/navigation/SelectLanguage.vue')['default']
+    TheAnnouncement: typeof import('./components/home/announcement/TheAnnouncement.vue')['default']
     TheHeader: typeof import('./components/navigation/TheHeader.vue')['default']
     TheMenu: typeof import('./components/navigation/TheMenu.vue')['default']
     TheNavigation: typeof import('./components/navigation/TheNavigation.vue')['default']
     TheProject: typeof import('./components/home/project/TheProject.vue')['default']
-    TheTrendings: typeof import('./components/home/TheTrendings.vue')['default']
+    TheTrending: typeof import('./components/home/trend/TheTrending.vue')['default']
+    TheTrendings: typeof import('./components/home/trend/TheTrendings.vue')['default']
+    TrendingView: typeof import('./components/home/trend/TrendingView.vue')['default']
   }
 }
