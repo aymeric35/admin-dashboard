@@ -12,7 +12,7 @@ defineProps({
 })
 
 const normalizedText = (length: number, prop: string) => {
-  return normalizeText(length, 200, prop, 900)
+  return normalizeText(length, 10, prop, 900)
 }
 </script>
 
@@ -23,25 +23,25 @@ const normalizedText = (length: number, prop: string) => {
   </div>
 </template>
 
-  <style lang="scss" scoped>
-  .announce {
-    h3 {
-      font-weight: 700;
-      font-size: $font-size-md;
-      padding-bottom: 0.75rem;
-    }
-
-    p {
-      color: $neutral-600;
-    }
+<style lang="scss" scoped>
+.announce {
+  h3 {
+    font-weight: 700;
+    font-size: $font-size-md;
+    padding-bottom: 0.75rem;
   }
 
-  .announce:not(:first-child) {
-    margin-top: 2rem;
+  p {
+    color: $neutral-600;
   }
+}
 
-  .announce:not(:last-child) {
-    border-bottom: solid 0.1rem rgba($color: $neutral-900, $alpha: 0.2);
-    padding-bottom: 3rem;
-  }
-  </style>
+.announce:not(:first-child) {
+  margin-top: 2rem;
+}
+
+.announce:not(:last-child) {
+  border-bottom: solid 0.1rem rgba($color: $neutral-900, $alpha: 0.2);
+  padding-bottom: 3rem;
+}
+</style>
