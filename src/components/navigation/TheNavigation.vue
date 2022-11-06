@@ -1,6 +1,6 @@
 <template>
   <div class="navigation">
-    <span class="close i-mdi:close" @click="$emit('close')" />
+    <span class="close i-mdi:chevron-double-left" @click="$emit('close')" />
     <h1>
       <span class="i-mdi:view-dashboard" />
       Dashboard
@@ -28,11 +28,11 @@
     z-index: 800;
 
     .close {
-        height: 2rem;
+        height: 4rem;
         position: absolute;
         right: 0.25rem;
         top: 0.25rem;
-        width: 2rem;
+        width: 4rem;
     }
 
     h1 {

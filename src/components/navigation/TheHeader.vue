@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const isMenuOpen = ref(false)
-const closeNavigation = () => {
+const closeMenu = () => {
   isMenuOpen.value = false
   document.body.classList.remove('nav-open')
 }
@@ -9,17 +9,37 @@ const openMenu = () => {
   document.body.classList.add('nav-open')
 }
 
-const target = ref(null)
-onClickOutside(target, () => closeNavigation())
-
 const { width } = useWindowSize()
+const target = ref(null)
+const body = ref(document.body)
+
+const { direction } = useSwipe(body,
+  {
+    onSwipe(e: TouchEvent) {
+      if (width.value < 720) {
+        if (direction.value === 'LEFT' && isMenuOpen.value) {
+          closeMenu()
+        }
+
+        if (direction.value === 'RIGHT' && !isMenuOpen.value) {
+          openMenu()
+        }
+      }
+    },
+  })
+
+onClickOutside(target, () => {
+  if (width.value < 720)
+    closeMenu()
+})
+
 const isMobile = () => width.value <= 430
 </script>
 
 <template>
   <header>
     <transition name="translate">
-      <TheNavigation v-if="isMenuOpen" ref="target" @close="closeNavigation" />
+      <TheNavigation v-if="isMenuOpen" ref="target" @close="closeMenu" />
     </transition>
     <section>
       <div>
