@@ -11,22 +11,7 @@ const openMenu = () => {
 
 const { width } = useWindowSize()
 const target = ref(null)
-const body = ref(document.body)
-
-const { direction } = useSwipe(body,
-  {
-    onSwipe(e: TouchEvent) {
-      if (width.value < 720) {
-        if (direction.value === 'LEFT' && isMenuOpen.value) {
-          closeMenu()
-        }
-
-        if (direction.value === 'RIGHT' && !isMenuOpen.value) {
-          openMenu()
-        }
-      }
-    },
-  })
+const body = ref()
 
 onClickOutside(target, () => {
   if (width.value < 720)
@@ -34,6 +19,24 @@ onClickOutside(target, () => {
 })
 
 const isMobile = () => width.value <= 430
+
+onMounted(() => {
+  body.value = document.body
+  const { direction } = useSwipe(body,
+    {
+      onSwipe(e: TouchEvent) {
+        if (width.value < 720) {
+          if (direction.value === 'LEFT' && isMenuOpen.value) {
+            closeMenu()
+          }
+
+          if (direction.value === 'RIGHT' && !isMenuOpen.value) {
+            openMenu()
+          }
+        }
+      },
+    })
+})
 </script>
 
 <template>
