@@ -5,8 +5,9 @@ const closeModal = () => open.value = false
 const { locale } = useI18n()
 const languages = ['en', 'fr']
 const changeLocale = (language: string) => {
-  if (locale.value === language) return
-  locale.value = language
+  if (locale.value === language) {
+    return locale.value = language
+  }
 }
 </script>
 
