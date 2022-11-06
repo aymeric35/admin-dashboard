@@ -1,20 +1,16 @@
 <script lang="ts" setup>
-const modules = import.meta.glob('~/assets/images/avatar/*.webp')
-const modulesLength = ref<number>(0)
-const avatars = ref<string[]>([])
+import av1 from '~/assets/images/avatar/av1.webp'
+import av2 from '~/assets/images/avatar/av2.webp'
+import av3 from '~/assets/images/avatar/av3.webp'
+import av4 from '~/assets/images/avatar/av4.webp'
+
+const avatars = ref<string[]>([av1, av2, av3, av4])
 const tags = ['@tegan', '@morgan', '@kendall', '@alex']
 const names = ['World Peace Builder', 'Super Cool Project', 'Life Changing App', 'No Traffic Maker']
-
-for (const path in modules) {
-  modules[path]().then(() => {
-    avatars.value.push(path)
-  })
-  if (modulesLength.value === 0) modulesLength.value = Object.keys(modules).length
-}
 </script>
 
 <template>
-  <template v-if="avatars.length === modulesLength">
+  <template v-if="avatars.length">
     <TrendingView v-for="(_, i) in 4" :key="i" :avatar="avatars[i]" :tag="tags[i]" :name="names[i]" />
   </template>
 </template>
