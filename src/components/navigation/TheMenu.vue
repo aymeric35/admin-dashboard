@@ -3,38 +3,47 @@ const pages = {
   home: {
     icon: 'i-mdi:home',
     translation: 'navigation.home',
+    to: '/',
   },
   profile: {
     icon: 'i-mdi:card-account-details',
     translation: 'navigation.profile',
+    to: '/profile',
   },
   messages: {
     icon: 'i-mdi:message-reply',
     translation: 'navigation.messages',
+    to: '/messages',
   },
   history: {
     icon: 'i-mdi:history',
     translation: 'navigation.history',
+    to: '/history',
   },
   tasks: {
     icon: 'i-mdi:file-multiple',
     translation: 'navigation.tasks',
+    to: '/tasks',
   },
   communities: {
     icon: 'i-mdi:account-group',
     translation: 'navigation.communities',
+    to: '/communities',
   },
   settings: {
     icon: 'i-mdi:cog',
     translation: 'navigation.settings',
+    to: '/settings',
   },
   support: {
     icon: 'i-mdi:help-circle',
     translation: 'navigation.support',
+    to: '/support',
   },
   privacy: {
     icon: 'i-mdi:shield-check',
     translation: 'navigation.privacy',
+    to: '/privacy',
   },
 }
 </script>
@@ -43,10 +52,10 @@ const pages = {
   <nav class="menu">
     <ul>
       <li v-for="page in pages" :key="page.icon">
-        <a class="links">
+        <RouterLink :to="page.to" class="links">
           <span :class="page.icon" />
           {{ $t(page.translation) }}
-        </a>
+        </RouterLink>
       </li>
     </ul>
   </nav>
