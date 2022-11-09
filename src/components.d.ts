@@ -15,10 +15,12 @@ declare module '@vue/runtime-core' {
     SelectLanguage: typeof import('./components/navigation/SelectLanguage.vue')['default']
     TheAnnouncement: typeof import('./components/home/announcement/TheAnnouncement.vue')['default']
     TheHeader: typeof import('./components/navigation/TheHeader.vue')['default']
+    TheLoader: typeof import('./components/TheLoader.vue')['default']
     TheMenu: typeof import('./components/navigation/TheMenu.vue')['default']
     TheNavigation: typeof import('./components/navigation/TheNavigation.vue')['default']
     TheProject: typeof import('./components/home/project/TheProject.vue')['default']
     TheTrending: typeof import('./components/home/trend/TheTrending.vue')['default']
     TrendingView: typeof import('./components/home/trend/TrendingView.vue')['default']
+    WorkInProgress: typeof import('./components/WorkInProgress.vue')['default']
   }
 }
