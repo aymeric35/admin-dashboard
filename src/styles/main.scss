@@ -40,9 +40,13 @@ section {
   padding: 2rem 1.5rem;
 }
 
+.page-container {
+  padding: 4rem 2rem 4rem 2rem;
+}
+
 main {
   width: 100%;
-  transition: padding-left .3s ease-out;
+  transition: padding-left 0.3s ease-out;
 }
 
 #nprogress {
