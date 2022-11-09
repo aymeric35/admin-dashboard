@@ -10,6 +10,7 @@ const openMenu = () => {
 }
 
 const { width } = useWindowSize()
+const isMobile = () => width.value <= 430
 const target = ref(null)
 const body = ref()
 
@@ -17,8 +18,6 @@ onClickOutside(target, () => {
   if (width.value < 720)
     closeMenu()
 })
-
-const isMobile = () => width.value <= 430
 
 onMounted(() => {
   body.value = document.body
